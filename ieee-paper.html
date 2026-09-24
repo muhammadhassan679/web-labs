@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IEEE Paper Template</title>
+<link rel="stylesheet" href="ieee-paper.css"></head><body><div class="page">
+<!-- title and authors -->
+<div class="head"><h1>Secure File Encryption Using RSA Asymmetric Cryptography</h1>
+<div class="authors"><div><b>Muhammad Hassan</b><br><i>Dept. of Computer Science</i><br>Air University, Islamabad, Pakistan<br>mhassan3379@gmail.com</div></div></div>
+<!-- everything below flows into two columns -->
+<div class="cols">
+<p class="abs"><i>Abstract</i>—This paper describes a file security tool written in Python that uses RSA asymmetric encryption. The tool generates a public and private key pair, encrypts a file with the public key and restores it with the private key. It shows how public-key cryptography can protect data in a simple, working program.</p>
+<p class="abs"><i>Keywords</i>—RSA, cryptography, file encryption, Python, information security</p>
+<h2>I. Introduction</h2>
+<p>Files stored or shared on a computer can be read by anyone who gets access to them. Encryption makes a file unreadable without the right key. Unlike symmetric encryption, RSA uses two keys, so the encryption key can be shared openly while the decryption key stays private.</p>
+<h2>II. Methodology</h2>
+<h3>A. Key Generation</h3>
+<p>The tool first creates an RSA key pair. The public key is used for encryption and the private key is kept secret for decryption.</p>
+<h3>B. Encryption and Decryption</h3>
+<p>To encrypt, the file's contents are read and processed with the public key. To decrypt, the encrypted file is processed with the private key to get the original data back.</p>
+<div class="fig">Fig. 1. Encryption and decryption workflow.</div>
+<h2>III. Results</h2>
+<p>The tool was tested on sample files. After decryption, the recovered file matched the original, which confirms that the key generation and the encryption and decryption steps work together correctly.</p>
+<h2>IV. Conclusion</h2>
+<p>This project applies the core ideas of RSA in a working program. Future work could add support for larger files and safer key storage.</p>
+<!-- reference list -->
+<h2>References</h2>
+<ol class="ref"><li>R. L. Rivest, A. Shamir, and L. Adleman, "A method for obtaining digital signatures and public-key cryptosystems," <i>Commun. ACM</i>, vol. 21, no. 2, pp. 120–126, 1978.</li>
+<li>W. Stallings, <i>Cryptography and Network Security: Principles and Practice</i>. Hoboken, NJ, USA: Pearson, 2017.</li></ol>
+</div></div></body></html>

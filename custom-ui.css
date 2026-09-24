@@ -1,0 +1,163 @@
+/* Lab 2 - Task 5 - Custom UI (glass login card)
+   Name: Muhammad Hassan */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: Segoe UI,Arial,sans-serif;
+  background: #0f0c29;
+  overflow: hidden;
+}
+
+/* soft glowing circles in the background */
+.blob {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(70px);
+  opacity: .75;
+  animation: float 12s ease-in-out infinite alternate;
+}
+
+.b1 {
+  width: 340px;
+  height: 340px;
+  background: #ff5f6d;
+  top: -60px;
+  left: -60px;
+}
+
+.b2 {
+  width: 400px;
+  height: 400px;
+  background: #7b5cff;
+  bottom: -100px;
+  right: -80px;
+  animation-delay: -4s;
+}
+
+.b3 {
+  width: 260px;
+  height: 260px;
+  background: #00d4ff;
+  top: 45%;
+  left: 55%;
+  animation-delay: -8s;
+}
+
+/* makes the blobs drift slowly */
+@keyframes float {
+  to {
+    transform: translate(60px,-50px) scale(1.15);
+  }
+}
+
+/* frosted glass card (backdrop-filter blurs what is behind it) */
+.card {
+  position: relative;
+  width: 340px;
+  padding: 30px;
+  border-radius: 24px;
+  background: #ffffff1f;
+  border: 1px solid #ffffff44;
+  backdrop-filter: blur(18px);
+  color: #fff;
+  box-shadow: 0 20px 50px #0006;
+}
+
+.card h2 {
+  margin: 0 0 4px;
+  text-align: center;
+}
+
+.card p.s {
+  text-align: center;
+  margin: 0 0 18px;
+  opacity: .75;
+  font-size: 14px;
+}
+
+/* radio buttons are hidden, the labels act as tabs (CSS only, no JS) */
+input[type=radio] {
+  display: none;
+}
+
+.tabs {
+  display: flex;
+  background: #0003;
+  border-radius: 30px;
+  margin-bottom: 20px;
+}
+
+.tabs label {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+/* highlight the active tab */
+#t1:checked~.tabs [for=t1],#t2:checked~.tabs [for=t2] {
+  background: #fff;
+  color: #4b2fd6;
+  font-weight: bold;
+}
+
+/* forms are hidden by default, the selected tab decides which one shows */
+.form {
+  display: none;
+}
+
+#t1:checked~.login,#t2:checked~.signup {
+  display: block;
+}
+
+.form input {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  background: #ffffff26;
+  color: #fff;
+  font-size: 15px;
+  outline: none;
+  transition: .3s;
+}
+
+.form input::placeholder {
+  color: #ffffffaa;
+}
+
+.form input:focus {
+  border-color: #fff;
+  background: #ffffff40;
+  transform: scale(1.02);
+}
+
+/* gradient button that lifts on hover */
+button {
+  width: 100%;
+  padding: 13px;
+  border: 0;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  background: linear-gradient(90deg,#ff5f6d,#7b5cff);
+  transition: .3s;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px #7b5cff88;
+}
+

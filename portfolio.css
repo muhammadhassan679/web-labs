@@ -1,0 +1,122 @@
+/* Lab 2 - Task 3 - Portfolio
+   Name: Muhammad Hassan */
+
+/* smooth scrolling when you click the menu links */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia,serif;
+  color: #2b2b2b;
+  background: #fffdf8;
+  line-height: 1.6;
+}
+
+/* menu bar */
+nav {
+  position: sticky;
+  top: 0;
+  background: #1d3557;
+  padding: 14px;
+  text-align: center;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 16px;
+  font-family: Arial,sans-serif;
+}
+
+nav a:hover {
+  color: #ffb703;
+}
+
+/* intro section at the top */
+header {
+  text-align: center;
+  padding: 80px 20px;
+  background: #a8dadc;
+}
+
+/* circle with my initial (replace with a real photo later) */
+.pic {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: #1d3557;
+  color: #fff;
+  font: 60px/130px Arial;
+  margin: 0 auto 16px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.6em;
+}
+
+section {
+  max-width: 800px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+h2 {
+  border-bottom: 3px solid #ffb703;
+  display: inline-block;
+}
+
+/* small skill tags */
+.skills span {
+  display: inline-block;
+  background: #1d3557;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin: 4px;
+  font-family: Arial,sans-serif;
+  font-size: 14px;
+}
+
+/* project cards, they wrap automatically on small screens */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 16px;
+}
+
+.proj {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-left: 6px solid #e63946;
+  padding: 14px;
+  border-radius: 6px;
+}
+
+/* card lifts up a little on hover */
+.proj:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px #0002;
+}
+
+/* bottom contact bar */
+footer {
+  background: #1d3557;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-family: Arial,sans-serif;
+}
+
+
+/* extra bits for the project cards and footer links */
+.proj small {
+  color: #666;
+  font-family: Arial, sans-serif;
+}
+
+footer a {
+  color: #ffb703;
+}

@@ -1,0 +1,91 @@
+/* Lab 2 - Task 1 - Class timetable
+   Name: Muhammad Hassan */
+
+/* basic page look: font, light background, spacing */
+body {
+  font-family: Segoe UI,Arial,sans-serif;
+  background: #f3f6fb;
+  margin: 0;
+  padding: 30px;
+  color: #223;
+}
+
+h1 {
+  text-align: center;
+  color: #1f3a8a;
+  margin-bottom: 4px;
+}
+
+p.sub {
+  text-align: center;
+  margin-top: 0;
+  color: #667;
+}
+
+.wrap {
+  max-width: 1000px;
+  margin: 20px auto;
+  overflow-x: auto;
+}
+
+/* the timetable itself */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0 4px 14px #0002;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* padding and borders for every cell */
+th,td {
+  padding: 14px 8px;
+  text-align: center;
+  border: 1px solid #dde3ee;
+  font-size: 14px;
+}
+
+th {
+  background: #1f3a8a;
+  color: #fff;
+}
+
+td.day {
+  background: #e8eefc;
+  font-weight: bold;
+}
+
+/* one colour per subject so it is easy to read */
+.ai {
+  background: #ffe0e0;
+}
+
+.os {
+  background: #e0f5e0;
+}
+
+.algo {
+  background: #fff2cc;
+}
+
+.web {
+  background: #dff0ff;
+}
+
+.lab {
+  background: #ead9ff;
+}
+
+/* lunch break column */
+.break {
+  background: #eee;
+  color: #888;
+  font-style: italic;
+}
+
+/* cells get slightly darker when you hover a row */
+tr:hover td:not(.day) {
+  filter: brightness(.96);
+}
+

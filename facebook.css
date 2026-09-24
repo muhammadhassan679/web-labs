@@ -1,0 +1,182 @@
+/* Lab 2 - Task 2 - Facebook homepage
+   Name: Muhammad Hassan */
+
+/* box-sizing so padding does not make boxes wider than expected */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Helvetica,Arial,sans-serif;
+  background: #f0f2f5;
+  color: #050505;
+}
+
+/* top bar, stays visible while scrolling */
+.nav {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  box-shadow: 0 2px 4px #0002;
+  z-index: 5;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #1877f2;
+  color: #fff;
+  font: bold 30px Arial;
+  text-align: center;
+  line-height: 46px;
+}
+
+.nav input {
+  border: 0;
+  background: #f0f2f5;
+  padding: 10px 16px;
+  border-radius: 20px;
+  width: 220px;
+  margin-left: 8px;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+}
+
+.tabs span {
+  padding: 10px 30px;
+  font-size: 20px;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+}
+
+.tabs span:first-child {
+  border-color: #1877f2;
+  color: #1877f2;
+}
+
+.me {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #bcc0c4;
+}
+
+/* three columns: left menu, feed, contacts */
+.main {
+  display: grid;
+  grid-template-columns: 260px 1fr 260px;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 16px auto;
+  padding: 0 12px;
+}
+
+.side p {
+  padding: 10px;
+  border-radius: 8px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.side p:hover {
+  background: #e4e6e9;
+}
+
+/* white boxes used for stories, posts and contacts */
+.card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px #0003;
+  padding: 14px;
+  margin-bottom: 16px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* grey circle standing in for profile pictures */
+.av {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #bcc0c4;
+  flex: none;
+}
+
+.say {
+  flex: 1;
+  background: #f0f2f5;
+  border-radius: 20px;
+  padding: 10px 14px;
+  color: #65676b;
+}
+
+/* gradient instead of a real photo */
+.post-img {
+  height: 220px;
+  border-radius: 8px;
+  margin: 10px 0;
+  background: linear-gradient(135deg,#6dd5fa,#1877f2);
+}
+
+.actions {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid #ddd;
+  padding-top: 8px;
+  color: #65676b;
+  font-weight: bold;
+}
+
+.story {
+  display: flex;
+  gap: 8px;
+}
+
+.story div {
+  flex: 1;
+  height: 150px;
+  border-radius: 10px;
+  background: linear-gradient(#f9d976,#f39f86);
+}
+
+.story div:nth-child(2) {
+  background: linear-gradient(#a1c4fd,#c2e9fb);
+}
+
+.story div:nth-child(3) {
+  background: linear-gradient(#d4fc79,#96e6a1);
+}
+
+.right h4 {
+  color: #65676b;
+  margin: 0 0 10px;
+}
+
+.right .row {
+  padding: 6px 0;
+}
+
+/* on small screens hide the side columns */
+@media(max-width:850px) {
+  .main {
+    grid-template-columns: 1fr;
+  }
+  .side,.right,.tabs {
+    display: none;
+  }
+}
+
